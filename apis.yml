@@ -46,7 +46,7 @@ tags:
 - Health Data
 - MCP
 created: '2026-07-24'
-modified: '2026-07-24'
+modified: '2026-07-24T18:00:00Z'
 specificationVersion: '0.19'
 apis:
 - aid: rhapsody:rhapsody-integration-engine
@@ -137,6 +137,18 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 common:
+- type: DomainSecurity
+  url: security/rhapsody-domain-security.yml
+- type: TrustCenter
+  url: security/rhapsody-trust-center.yml
+- type: Conformance
+  url: conformance/rhapsody-conformance.yml
+- type: Authentication
+  url: authentication/rhapsody-authentication.yml
+- type: LLMsTxt
+  url: llms/rhapsody-llms.txt
+- type: TermsOfService
+  url: https://rhapsody.health/rhapsody-terms-and-conditions/
 - type: Website
   url: https://rhapsody.health/
 - type: DeveloperPortal
@@ -147,8 +159,6 @@ common:
   url: https://rhapsody.health/blog/
 - type: Support
   url: https://rhapsody.health/support/
-- type: TrustCenter
-  url: https://rhapsody.health/trust-center/
 - type: Security
   url: https://rhapsody.health/data-privacy-and-security/
 - type: Compliance

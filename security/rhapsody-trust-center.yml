@@ -1,0 +1,45 @@
+generated: '2026-07-24'
+method: searched
+probe: false
+source: https://rhapsody.health/trust-center/
+url: https://rhapsody.health/trust-center/
+summary: >-
+  Rhapsody publishes a Trust and Compliance Center naming a full third-party
+  certification and attestation program covering its cloud interoperability
+  platform. Encryption is TLS 1.2+ in transit and AES-256 at rest. Regulatory
+  posture is supported contractually (HIPAA via BAAs, GDPR via a DPA with SCCs).
+certifications:
+- name: SOC 2 Type II
+  scope: Security trust service criteria; data integrity, backup and recovery
+  validity: Reporting period May 2025 - April 2026
+- name: ISO/IEC 27001:2022
+  scope: Information security management; all Rhapsody solutions
+  validity: Valid until April 2028
+- name: HITRUST e1
+  scope: Essential cybersecurity hygiene; Rhapsody cloud solutions (incl. Corepoint Integration)
+  validity: Valid until December 2026
+- name: EU-US & UK-US Data Privacy Framework
+  scope: Lawful transatlantic data transfers
+  validity: Valid until July 2026
+- name: Cyber Essentials Plus
+  scope: Hands-on technical verification of UK cyber security
+  validity: Valid until June 2026
+- name: Penetration Test Attestation
+  scope: Third-party validation of platform and infrastructure security
+  validity: Valid until March 2027
+regulatory_frameworks:
+- name: HIPAA
+  mechanism: Business Associate Agreements (BAAs)
+- name: GDPR
+  mechanism: Data Processing Addendum (DPA) with Standard Contractual Clauses (SCCs)
+- name: ONC Cures Act
+  mechanism: Platform designed to support interoperability requirements
+encryption:
+  in_transit: TLS 1.2+
+  at_rest: AES-256
+contact:
+  compliance: compliance@rhapsody.health
+related_pages:
+- https://rhapsody.health/data-privacy-and-security/
+- https://rhapsody.health/onc-compliance/
+- https://rhapsody.health/privacy-policy/

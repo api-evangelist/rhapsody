@@ -1,0 +1,40 @@
+generated: '2026-07-24'
+method: searched
+source: >-
+  Observed 307 redirect from https://docs.rhapsody.health/ to the AWS Cognito
+  hosted UI (lyniate-docs.auth.us-east-1.amazoncognito.com/oauth2/authorize);
+  https://rhapsody.health/solutions/rhapsody-axon/
+note: >-
+  Rhapsody's product REST/administration and FHIR API reference is gated behind
+  docs.rhapsody.health, so the product APIs' own security schemes are not
+  publicly observable and are NOT asserted here (no public OpenAPI to derive
+  from). What IS observable is the authentication fronting the developer surface:
+  the documentation portal and the Axon agent both sit behind enterprise SSO.
+  This profile records that observed surface honestly; it is not a claim about
+  the product API token model.
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  gated: true
+schemes:
+- name: docs-portal-sso
+  surface: Developer documentation portal (docs.rhapsody.health)
+  type: oauth2
+  flow: authorizationCode
+  pkce: S256
+  provider: AWS Cognito (user pool "lyniate-docs", us-east-1)
+  authorizationUrl: https://lyniate-docs.auth.us-east-1.amazoncognito.com/oauth2/authorize
+  scopes: [openid, email, profile]
+  evidence: 307 redirect from docs host to Cognito /oauth2/authorize with response_type=code
+- name: axon-agent-sso
+  surface: Rhapsody Axon AI agent (chat.axon.rhapsody.health)
+  type: openIdConnect
+  provider: OneLogin
+  access: Existing Rhapsody / Corepoint customers only
+  evidence: Axon solution page states access via OneLogin for existing customers
+product_api_auth:
+  status: gated
+  detail: >-
+    Rhapsody and Corepoint expose REST administration APIs (Corepoint 7.5.3
+    Administration REST API) and FHIR APIs whose authentication is documented in
+    the gated developer portal; not verifiable from a public specification.

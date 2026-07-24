@@ -1,0 +1,53 @@
+generated: '2026-07-24'
+method: searched
+source: >-
+  https://rhapsody.health/solutions/rhapsody/ ,
+  https://rhapsody.health/solutions/rhapsody-axon/ ,
+  https://rhapsody.health/trust-center/
+note: >-
+  Conformance asserted from Rhapsody's public solution and trust pages. Rhapsody
+  is a healthcare interoperability platform whose defining value is standards
+  breadth: it moves data across the healthcare exchange standards below from a
+  single deployment. Machine-readable API specs are gated behind
+  docs.rhapsody.health (AWS Cognito SSO), so operation-level RFC conformance
+  (e.g. RFC 9457) cannot be verified from a public OpenAPI and is left null.
+standards:
+- id: hl7-v2
+  conforms: true
+  evidence: Core supported message standard across Rhapsody and Corepoint engines
+- id: fhir
+  conforms: true
+  evidence: FHIR named as a first-class supported standard; FHIR APIs documented in the developer portal
+- id: cda
+  conforms: true
+  evidence: Clinical Document Architecture listed among supported standards
+- id: x12-edi
+  conforms: true
+  evidence: X12/EDI listed among supported standards
+- id: dicom
+  conforms: true
+  evidence: DICOM imaging listed among supported standards (Image Director)
+- id: ncpdp
+  conforms: null
+  evidence: not confirmed on public pages
+- id: mcp
+  conforms: true
+  evidence: Model Context Protocol supported via Rhapsody Axon for agent-ready workflows
+- id: oauth2
+  conforms: true
+  evidence: Developer documentation portal fronted by AWS Cognito OAuth2 (authorization code + PKCE)
+- id: openid-connect
+  conforms: true
+  evidence: Cognito hosted UI issues openid/email/profile scopes (OIDC)
+- id: hipaa
+  conforms: true
+  evidence: Supported via Business Associate Agreements (trust center)
+- id: gdpr
+  conforms: true
+  evidence: Supported via DPA with Standard Contractual Clauses (trust center)
+- id: onc-cures-act
+  conforms: true
+  evidence: Platform designed to support ONC/CMS interoperability requirements
+- id: rfc9457-problem-details
+  conforms: null
+  evidence: API spec gated; cannot verify error envelope from a public OpenAPI
