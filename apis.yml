@@ -1,0 +1,159 @@
+aid: rhapsody
+url: https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/apis.yml
+name: Rhapsody
+kind: company
+description: >-
+  Rhapsody Health Solutions is a US-headquartered (Boston, Massachusetts)
+  healthcare interoperability company trusted by more than 1,900 healthcare
+  organizations across 31 countries, and recognized as Best in KLAS for
+  integration engines for 17 consecutive years. Formed from the lineage of
+  Orion Health's Rhapsody Integration Engine (2000), the 2019 merger with
+  Corepoint Health, and acquisitions of Datica, NextGate EMPI, and CareCom,
+  Rhapsody delivers a single interoperability platform spanning integration
+  engines (Rhapsody and Corepoint), enterprise master patient index (EMPI /
+  Rhapsody Identity), semantic terminology management, data governance
+  (Guardian), and automated integrations (Envoy, Image Director). The platform
+  supports FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and Model
+  Context Protocol (MCP) from a single deployment, with embedded AI (Rhapsody
+  Axon). Its home market is the United States, aligned to ONC/CMS interoperability
+  mandates. Rhapsody's product REST/administration and FHIR APIs are documented
+  in a developer documentation portal (docs.rhapsody.health) that sits behind an
+  AWS Cognito single-sign-on gate; there is no public self-serve API host or
+  downloadable specification.
+accessModel:
+  pricing: enterprise
+  onboarding: sales
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Sales-led · Gated documentation
+  confidence: high
+  source:
+  - website
+  - documentation
+  generated: '2026-07-24'
+  method: manual
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- United States
+- Interoperability
+- Integration Engine
+- FHIR
+- HL7
+- EMPI
+- Terminology
+- Health Data
+- MCP
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis:
+- aid: rhapsody:rhapsody-integration-engine
+  name: Rhapsody Integration Engine
+  description: >-
+    Rhapsody's flagship healthcare integration engine, connecting systems across
+    FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and MCP from a single
+    platform, with a REST administration/management API. Deployed in customer
+    (self-hosted or cloud) environments; API reference is documented in the gated
+    developer documentation portal.
+  humanURL: https://rhapsody.health/solutions/rhapsody/
+  tags:
+  - Integration Engine
+  - FHIR
+  - HL7
+  - Interoperability
+  properties:
+  - type: Documentation
+    url: https://rhapsody.health/solutions/rhapsody/
+  - type: APIReference
+    url: https://docs.rhapsody.health/
+- aid: rhapsody:corepoint-integration-engine
+  name: Corepoint Integration Engine
+  description: >-
+    Corepoint healthcare integration engine (from the 2019 Corepoint Health
+    merger), the top-ranked integration engine since 2009, with an Administration
+    REST API introduced in Corepoint 7.5.3 for auditing and configuration.
+    Documentation is served through the gated developer portal.
+  humanURL: https://rhapsody.health/solutions/corepoint/
+  tags:
+  - Integration Engine
+  - HL7
+  - Interoperability
+  properties:
+  - type: Documentation
+    url: https://rhapsody.health/solutions/corepoint/
+  - type: APIReference
+    url: https://docs.rhapsody.health/
+- aid: rhapsody:rhapsody-identity-empi
+  name: Rhapsody Identity (EMPI)
+  description: >-
+    Rhapsody's Enterprise Master Patient Index for patient matching and identity
+    resolution (built on the NextGate acquisition), exposing API capabilities for
+    person-data management. API reference is documented in the gated developer
+    portal.
+  humanURL: https://rhapsody.health/solutions/empi/
+  tags:
+  - EMPI
+  - Patient Matching
+  - Identity
+  properties:
+  - type: Documentation
+    url: https://rhapsody.health/solutions/empi/
+  - type: APIReference
+    url: https://docs.rhapsody.health/
+- aid: rhapsody:rhapsody-semantic
+  name: Rhapsody Semantic (Terminology Management)
+  description: >-
+    Rhapsody Semantic terminology management and data standardization services
+    (code-system mapping, LOINC/SNOMED standardization) supporting FHIR
+    terminology workflows. Documentation is served through the gated developer
+    portal.
+  humanURL: https://rhapsody.health/solutions/terminology-management/
+  tags:
+  - Terminology
+  - Semantic Interoperability
+  - FHIR
+  properties:
+  - type: Documentation
+    url: https://rhapsody.health/solutions/terminology-management/
+  - type: APIReference
+    url: https://docs.rhapsody.health/
+- aid: rhapsody:rhapsody-axon-mcp
+  name: Rhapsody Axon (AI + MCP)
+  description: >-
+    Rhapsody Axon embeds AI into the integration platform and adds Model Context
+    Protocol (MCP) support for AI-driven, agent-ready healthcare data workflows.
+    Capabilities are documented in the gated developer portal.
+  humanURL: https://rhapsody.health/solutions/rhapsody-axon/
+  tags:
+  - MCP
+  - AI
+  - Interoperability
+  properties:
+  - type: Documentation
+    url: https://rhapsody.health/solutions/rhapsody-axon/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+common:
+- type: Website
+  url: https://rhapsody.health/
+- type: DeveloperPortal
+  url: https://docs.rhapsody.health/
+- type: Documentation
+  url: https://docs.rhapsody.health/
+- type: Blog
+  url: https://rhapsody.health/blog/
+- type: Support
+  url: https://rhapsody.health/support/
+- type: TrustCenter
+  url: https://rhapsody.health/trust-center/
+- type: Security
+  url: https://rhapsody.health/data-privacy-and-security/
+- type: Compliance
+  url: https://rhapsody.health/onc-compliance/
+- type: PrivacyPolicy
+  url: https://rhapsody.health/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/rhapsodyhealth

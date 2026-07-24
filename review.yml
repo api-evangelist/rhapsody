@@ -1,0 +1,119 @@
+aid: rhapsody
+name: Rhapsody
+review:
+  question: Does Rhapsody Health Solutions expose a public, self-serve developer portal, FHIR CapabilityStatement, or downloadable API specification?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+  homeMarket: United States
+findings:
+  summary: |
+    Rhapsody Health Solutions (Boston, Massachusetts; formerly Lyniate,
+    combining Orion Health's Rhapsody Integration Engine, Corepoint Health,
+    NextGate EMPI, Datica, and CareCom) is a US healthcare interoperability
+    vendor selling deployable software rather than a hosted public API. Its
+    platform supports FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and
+    Model Context Protocol (MCP) from a single deployment, and each product
+    (Rhapsody Integration Engine, Corepoint, Rhapsody Identity/EMPI, Rhapsody
+    Semantic, Rhapsody Axon) exposes administration/management REST and FHIR
+    APIs. However, the developer documentation portal at docs.rhapsody.health
+    is entirely gated behind an AWS Cognito single-sign-on (OAuth2
+    authorization-code + PKCE): every path, including /openapi.json,
+    /openapi.yaml, /swagger.json, /api-docs, and /spec, returns HTTP 307 and
+    redirects to the Cognito hosted login. No downloadable OpenAPI/Swagger
+    specification, no public FHIR CapabilityStatement (/metadata), and no
+    SMART-on-FHIR /.well-known/smart-configuration are publicly reachable. The
+    engines run in customer (self-hosted or cloud) environments, so there is no
+    single public FHIR base URL to interrogate. This is an honest gated result:
+    real, documented product APIs behind a partner/customer login, with no
+    self-serve public surface and nothing harvestable anonymously.
+  developerPortal:
+    url: https://docs.rhapsody.health/
+    status: 307
+    gated: true
+    gate: AWS Cognito hosted UI (OAuth2 authorization_code + PKCE; scope email profile openid; client_id 3eonh7vfjh4sk409nppt8q57nc; pool us-east-1_JxVIyiXLx)
+    note: Every documentation path 307-redirects to lyniate-docs.auth.us-east-1.amazoncognito.com; content is not anonymously reachable.
+  fhirCapabilityStatement:
+    captured: false
+    version: null
+    resources: []
+    note: No public FHIR base URL is served; api.rhapsody.health and fhir.rhapsody.health do not resolve (connection failed). Engines are deployed per-customer.
+  smartConfiguration:
+    captured: false
+    url: https://rhapsody.health/.well-known/smart-configuration
+    status: 404
+  downloadableSpecs:
+    count: 0
+    provenance: none
+    note: docs.rhapsody.health/openapi.json, /openapi.yaml, /swagger.json, /api-docs, /spec all return the Cognito login SPA behind a 307, not a parseable specification.
+  authModel:
+    documentationAccess: AWS Cognito OAuth2 (authorization_code + PKCE)
+    productApis: Product REST/administration and FHIR APIs are documented behind the gated portal; no public auth flow is published anonymously.
+    smartOnFhir: not publicly documented (no reachable /.well-known/smart-configuration)
+  standardsConformance:
+    supportedStandards:
+    - FHIR
+    - HL7 v2
+    - REST
+    - CDA
+    - X12/EDI
+    - SQL
+    - DICOM
+    - AMQP
+    - MCP
+    usCore: not publicly documented
+    daVinci: not publicly documented
+    carinBlueButton: not publicly documented
+    note: Standards support is asserted on public product/marketing pages; conformance implementation guides are documented only inside the gated portal.
+  selfServeVsGated: gated (sales-led, partner/customer login required for documentation)
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: true
+    note: Product administration/management REST APIs; documented behind the gated developer portal, deployed per customer instance.
+  - protocol: FHIR
+    scheme: https
+    documented: true
+    note: FHIR facade/support is a product capability, documented behind the gate; no public FHIR base URL.
+  - protocol: MCP
+    scheme: https
+    documented: true
+    note: Model Context Protocol support (Rhapsody Axon) advertised on public product pages; details behind the gate.
+  - protocol: WebSocket
+    scheme: wss
+    documented: false
+    note: No public WebSocket endpoint is documented.
+sources:
+- url: https://rhapsody.health/
+  type: Website
+  note: Company overview; 1,900+ organizations, 31 countries, Best in KLAS 17 years; supports APIs/FHIR/HL7/MCP.
+- url: https://rhapsody.health/about-us/
+  type: Website
+  note: Headquarters One Beacon Street, Boston, MA 02108; lineage Orion Health (1993) / Rhapsody (2000) / Corepoint merger (2019) / Datica, NextGate, CareCom acquisitions.
+- url: https://rhapsody.health/products/
+  type: Documentation
+  note: Product family and standards list (FHIR, HL7 v2, MCP, REST, CDA, X12/EDI, SQL, DICOM, AMQP).
+- url: https://docs.rhapsody.health/
+  type: DeveloperPortal
+  note: Returns HTTP 307 to AWS Cognito hosted login for all paths; documentation gated.
+- url: https://docs.rhapsody.health/openapi.json
+  type: Specification
+  note: HTTP 307 to Cognito login (Lambda@Edge SPA auth); no parseable OpenAPI served anonymously.
+- url: https://rhapsody.health/.well-known/smart-configuration
+  type: WellKnown
+  note: HTTP 404; no SMART-on-FHIR configuration published.
+actions:
+  openapiHarvested: false
+  specsSaved: 0
+  reason: |
+    No anonymously reachable specification, FHIR CapabilityStatement, or
+    SMART-on-FHIR configuration exists. The developer documentation portal is
+    fully gated behind AWS Cognito, and the integration engines are deployed in
+    customer environments with no single public API host. The profile catalogs
+    the real, publicly-described product API family (Rhapsody Integration
+    Engine, Corepoint, Rhapsody Identity/EMPI, Rhapsody Semantic, Rhapsody Axon)
+    with links to public product pages and the gated developer portal. Nothing
+    behind the gate was fabricated.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
