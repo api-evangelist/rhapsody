@@ -1,0 +1,100 @@
+generated: '2026-08-14'
+method: searched
+source: https://rhapsody.health/blog/category/product-news/
+docs: https://rhapsody.health/blog/category/product-news/
+note: >-
+  Rhapsody publishes NO dedicated, versioned changelog or release-notes feed on a
+  public URL. Version-specific release notes for the Rhapsody and Corepoint
+  engines live in the gated documentation portal (docs.rhapsody.health, AWS
+  Cognito SSO). What IS public is a dated "Product News" stream on the corporate
+  blog, which announces product launches and named engine releases. The entries
+  below were read from that stream (WordPress REST index of category 41,
+  60 posts); only product/release announcements are recorded, not thought
+  leadership or case studies. Dates are the posts' own publication dates.
+scheme:
+  type: product-announcement-blog
+  versioning: product major.minor (e.g. Rhapsody Integration 7.3, Corepoint 7.5.3, Rhapsody Semantic 15.3)
+  machine_readable: false
+  feed: https://rhapsody.health/wp-json/wp/v2/posts?categories=41
+  release_notes: gated (docs.rhapsody.health)
+current_version:
+  status: not-published
+  note: >-
+    Rhapsody does not publish a current engine version number on a public page;
+    the most recent named engine release in the public stream is Corepoint 7.5.3.
+entries:
+- date: '2026-03-04'
+  title: 'Meet Rhapsody Axon: The Integration Agent Built for Healthcare'
+  product: Rhapsody Axon
+  kind: launch
+  breaking: false
+  highlights:
+  - In-product AI integration agent embedded in Rhapsody Integration and Corepoint Integration
+  - Surfaces best practices for APIs, FHIR, HL7 v2, MCP, REST, CDA and X12/EDI
+  url: https://rhapsody.health/blog/meet-rhapsody-axon-the-integration-agent-built-for-healthcare/
+- date: '2026-01-06'
+  title: Rhapsody Expands AWS Marketplace Presence to Power AI-Ready Healthcare Data Exchange
+  product: platform
+  kind: distribution
+  breaking: false
+  url: https://rhapsody.health/blog/rhapsody-expands-aws-marketplace-presence-to-power-ai-ready-healthcare-data-exchange/
+- date: '2025-10-21'
+  title: Rhapsody Launches Guardian to Power AI-Ready, Secure Data Exchange Across Healthcare
+  product: Rhapsody Guardian
+  kind: launch
+  breaking: false
+  highlights:
+  - Healthcare API gateway with OAuth 2.0, SMART on FHIR and Basic Auth support
+  - Rate limiting, allow/block rules and audit-ready logging
+  url: https://rhapsody.health/blog/rhapsody-launches-api-guardian-to-power-ai-ready-secure-data-exchange-across-healthcare/
+- date: '2025-08-12'
+  title: Rhapsody Introduces Image Director to Modernize Imaging Workflows
+  product: Rhapsody Image Director
+  kind: launch
+  breaking: false
+  highlights:
+  - DICOM routing and imaging workflow automation
+  url: https://rhapsody.health/blog/rhapsody-introduces-image-director-to-modernize-imaging-workflows-and-reduce-infrastructure-complexity/
+- date: '2025-08-05'
+  title: 'Rhapsody Launches Envoy: A Transformative Approach to Managing Integrations Operations'
+  product: Rhapsody Envoy
+  kind: launch
+  breaking: false
+  url: https://rhapsody.health/blog/rhapsody-launches-envoy-a-transformative-approach-to-managing-integrations-operations-highlights-real-world-impact-in-upcoming-webinar/
+- date: '2024-02-02'
+  title: Accelerate digital health adoption with Rhapsody Integration Engine 7.3
+  product: Rhapsody Integration Engine
+  version: '7.3'
+  kind: release
+  breaking: false
+  url: https://rhapsody.health/blog/accelerate-digital-health-adoption-with-rhapsody-integration-engine-7-3/
+- date: '2024-01-25'
+  title: API capabilities within Rhapsody EMPI solution
+  product: Rhapsody EMPI
+  kind: capability
+  breaking: false
+  url: https://rhapsody.health/blog/api-capabilities-within-rhapsody-empi-solution/
+- date: '2023-08-01'
+  title: Manage versions and workflows with improved visibility and usability in Rhapsody Semantic 15.3
+  product: Rhapsody Semantic
+  version: '15.3'
+  kind: release
+  breaking: false
+  url: https://rhapsody.health/blog/manage-versions-and-workflows-with-improved-visibility-and-usability-in-rhapsody-semantic-15-3/
+- date: '2023-03-24'
+  title: Corepoint 7.5.3 features Administration REST API, enhances auditing and configuration
+  product: Corepoint Integration Engine
+  version: 7.5.3
+  kind: release
+  breaking: false
+  highlights:
+  - Administration REST API reaches general availability after a 2022 beta
+  - Retrieves engine and connection data; controls aspects of the engine and Assured Availability
+  url: https://rhapsody.health/blog/corepoint-7-5-3-features-administration-rest-api-enhances-auditing-and-configuration/
+  note: >-
+    Publication date confirmed from the WordPress REST record for this slug; it is
+    the public announcement of the Administration REST API reaching GA.
+x-evidence:
+  fetched: '2026-08-14'
+  url: https://rhapsody.health/wp-json/wp/v2/posts?categories=41&per_page=20&orderby=date
+  http_status: 200

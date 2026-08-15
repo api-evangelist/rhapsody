@@ -1,0 +1,53 @@
+generated: '2026-08-14'
+method: searched
+source: registry.npmjs.org, pypi.org, rhapsody.health docs/solution pages, github.com
+note: >-
+  No first-party Rhapsody client library, SDK or CLI is published to any public
+  package registry. Rhapsody ships installed enterprise products (integration
+  engines, EMPI, terminology, gateway) that customers deploy, integrate against
+  in-place, and configure through the product UI — not a public API with client
+  libraries. There is also no Rhapsody GitHub organization
+  (github.com/rhapsodyhealth and /RhapsodyHealth both 404). Recorded as an
+  honest empty result: NO `Packages` and NO `SDKs` pointer is emitted into
+  apis.yml, because emitting one would assert client libraries that do not exist.
+package_count: 0
+packages: []
+registries_checked:
+- registry: npm
+  queries: ['rhapsody-health', '@rhapsody/sdk', 'rhapsody-fhir', 'corepoint', 'rhapsody healthcare (search)']
+  result: none first-party
+  note: >-
+    Every named package returned 404; the keyword search returned only unrelated
+    healthcare packages (Medplum, Google Healthcare API, CMSgov design system).
+  version: null
+  published: null
+- registry: pypi
+  queries: ['rhapsody', 'rhapsody-health', 'nextgate']
+  result: none first-party
+  note: >-
+    pypi.org/project/rhapsody 0.4.0 is an unrelated bioinformatics package
+    ("Microbe-metabolite interactions through neural networks"). rhapsody-health
+    and nextgate return 404.
+  version: null
+  published: null
+- registry: github
+  queries: ['github.com/rhapsodyhealth', 'github.com/RhapsodyHealth']
+  result: no organization (404 on both)
+  version: null
+  published: null
+source_code:
+  organization: null
+  note: >-
+    github.com/orionhealth exists but belongs to Orion Health. Rhapsody's own
+    llms.txt states plainly that "Rhapsody is not Orion Health and is not owned by
+    Orion Health" and lists Orion Health as a legacy brand, so that organization is
+    NOT wired to this profile.
+distribution:
+- channel: Customer download / installer via gated documentation portal
+  url: https://docs.rhapsody.health/
+  status: 307
+  note: AWS Cognito SSO gate
+- channel: AWS Marketplace
+  url: https://rhapsody.health/blog/rhapsody-expands-aws-marketplace-presence-to-power-ai-ready-healthcare-data-exchange/
+  status: 200
+checked: '2026-08-14'

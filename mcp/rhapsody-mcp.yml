@@ -1,0 +1,57 @@
+generated: '2026-08-14'
+method: searched
+status: none-published
+source: https://rhapsody.health/solutions/rhapsody-axon/ , https://rhapsody.health/solutions/agent-ready-interoperability/ , https://rhapsody.health/llms.txt
+note: >-
+  Rhapsody markets MCP (Model Context Protocol) support as a PLATFORM CAPABILITY
+  of its integration engines — "Rhapsody supports APIs and Interfaces for FHIR,
+  HL7 v2, MCP, REST, CDA, X12/EDI, SQL, DICOM, and AMQP from a single platform...
+  Model Context Protocol (MCP) support is included for organizations exploring
+  more automated, AI-driven workflows" — but publishes NO MCP server an agent can
+  reach. There is no hosted endpoint, no stdio package on any registry, no
+  install command, and no configuration example on any public page. MCP here is
+  something a Rhapsody CUSTOMER stands up inside its own engine deployment, per
+  instance, behind that customer's own network and identity. Because nothing is
+  reachable and nothing is installable, NO `MCPServer` pointer is emitted into
+  apis.yml: a pointer would credit Rhapsody with an agent surface no agent can
+  call. No tool list is derived either — there is no public OpenAPI to derive one
+  from, and inventing an endpoint or a tool set would be fabrication.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+server: null
+tools: []
+evidence:
+- claim: MCP named as a supported protocol alongside FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP
+  url: https://rhapsody.health/solutions/agent-ready-interoperability/
+  status: 200
+- claim: Axon lists MCP among the standards it surfaces best practices for; access is via chat.axon.rhapsody.health behind OneLogin for existing customers
+  url: https://rhapsody.health/solutions/rhapsody-axon/
+  status: 200
+- claim: Provider-published llms.txt names Rhapsody Axon and Axon Connect but no MCP endpoint or package
+  url: https://rhapsody.health/llms.txt
+  status: 200
+probes:
+- url: https://mcp.rhapsody.health/
+  status: 000
+  note: host does not resolve
+- url: https://rhapsody.health/mcp
+  status: 404
+- url: https://chat.axon.rhapsody.health/mcp
+  status: 404
+- url: https://chat.axon.rhapsody.health/.well-known/oauth-protected-resource
+  status: 404
+registry_checks:
+- registry: npm
+  query: rhapsody-health, '@rhapsody/sdk', rhapsody-fhir, corepoint
+  result: no first-party package
+- registry: pypi
+  query: rhapsody, rhapsody-health
+  result: >-
+    "rhapsody" on PyPI (0.4.0) is an unrelated scientific package
+    ("Microbe-metabolite interactions through neural networks"), not Rhapsody Health.
+checked: '2026-08-14'

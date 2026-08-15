@@ -1,9 +1,10 @@
-generated: '2026-07-24'
+generated: '2026-08-14'
 method: searched
 source: >-
   Observed 307 redirect from https://docs.rhapsody.health/ to the AWS Cognito
   hosted UI (lyniate-docs.auth.us-east-1.amazoncognito.com/oauth2/authorize);
-  https://rhapsody.health/solutions/rhapsody-axon/
+  https://rhapsody.health/solutions/rhapsody-axon/ ;
+  https://rhapsody.health/solutions/guardian/
 note: >-
   Rhapsody's product REST/administration and FHIR API reference is gated behind
   docs.rhapsody.health, so the product APIs' own security schemes are not
@@ -32,6 +33,19 @@ schemes:
   provider: OneLogin
   access: Existing Rhapsody / Corepoint customers only
   evidence: Axon solution page states access via OneLogin for existing customers
+gateway_supported_schemes:
+  product: Rhapsody Guardian
+  url: https://rhapsody.health/solutions/guardian/
+  note: >-
+    These are the authentication protocols Rhapsody's healthcare API gateway
+    supports for the APIs a CUSTOMER publishes through it — quoted from the
+    Guardian product page ("Guardian supports OAuth 2.0, SMART on FHIR, and Basic
+    Auth"). They describe what the product can enforce, not the token model of a
+    Rhapsody-operated public endpoint, which remains gated.
+  schemes:
+  - oauth2
+  - smart-on-fhir
+  - http-basic
 product_api_auth:
   status: gated
   detail: >-

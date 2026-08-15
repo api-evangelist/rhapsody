@@ -1,0 +1,38 @@
+generated: '2026-08-14'
+method: searched
+source: https://rhapsody.health/ (site sitemap walked), https://rhapsody.health/request-a-demo/
+note: >-
+  Rhapsody publishes NO pricing page and NO plans of any kind. https://rhapsody.health/pricing/
+  returns 404, and the full sitemap_index.xml (2,802 lines, fetched 2026-08-14)
+  contains no pricing, plans, packaging or tiers URL. Every commercial path on the
+  site funnels to a demo or contact form (/request-a-demo/, /get-a-demo/,
+  /get-a-demo-of-axon/, /contact/). Rhapsody is sold enterprise, sales-led, per
+  deployment (cloud/SaaS, client-hosted or hybrid), with list price disclosed only
+  under a sales conversation. Recorded as plan_count 0 — an honest zero, not an
+  omission. Private AWS Marketplace offers exist (announced 2026-01-06) but the
+  listings do not publish public prices.
+plan_count: 0
+plans: []
+pricing_model:
+  type: enterprise
+  disclosure: contact-sales
+  billing: negotiated (per deployment / subscription)
+  free_tier: false
+  trial: false
+  self_serve: false
+  usage_metering_published: false
+channels:
+- name: Direct sales
+  url: https://rhapsody.health/request-a-demo/
+- name: AWS Marketplace
+  url: https://rhapsody.health/blog/rhapsody-expands-aws-marketplace-presence-to-power-ai-ready-healthcare-data-exchange/
+  note: Marketplace presence announced 2026-01-06; no public price on the listing pages.
+x-evidence:
+- url: https://rhapsody.health/pricing/
+  status: 404
+- url: https://rhapsody.health/sitemap_index.xml
+  status: 200
+  note: no pricing/plans URL present
+- url: https://rhapsody.health/request-a-demo/
+  status: 200
+checked: '2026-08-14'

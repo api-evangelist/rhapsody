@@ -1,0 +1,34 @@
+generated: '2026-08-14'
+method: searched
+source: https://rhapsody.health/solutions/guardian/ , https://rhapsody.health/ (sitemap walked)
+note: >-
+  Rhapsody publishes NO rate limits for any of its own APIs, and no rate-limit
+  response headers or 429 semantics are documented on any public page. The
+  reference for the Rhapsody and Corepoint administration/FHIR APIs is gated
+  behind docs.rhapsody.health (AWS Cognito SSO), so runtime limits are not
+  publicly observable. IMPORTANT DISTINCTION: rate limiting appears on Rhapsody's
+  public site only as a FEATURE Rhapsody Guardian gives its customers to apply to
+  THEIR OWN APIs — "authentication, rate limiting, allow/block rules, and
+  audit-ready logging" — not as a published limit on a Rhapsody-operated endpoint.
+  That capability is recorded below under `product_capability` and is deliberately
+  NOT counted as a published limit. limit_count 0 is an honest zero.
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+product_capability:
+  product: Rhapsody Guardian
+  url: https://rhapsody.health/solutions/guardian/
+  capability: >-
+    Guardian is a healthcare API gateway that provides rate limiting, allow/block
+    rules, authentication (OAuth 2.0, SMART on FHIR, Basic Auth) and audit-ready
+    logging to the customer's own published APIs. The limits are configured per
+    customer deployment and are not a Rhapsody-published quota.
+  scope: customer-configured
+x-evidence:
+- url: https://rhapsody.health/solutions/guardian/
+  status: 200
+- url: https://docs.rhapsody.health/
+  status: 307
+  note: redirects to AWS Cognito hosted UI; API reference not publicly readable
+checked: '2026-08-14'

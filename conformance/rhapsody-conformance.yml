@@ -1,8 +1,11 @@
-generated: '2026-07-24'
+generated: '2026-08-14'
 method: searched
 source: >-
   https://rhapsody.health/solutions/rhapsody/ ,
   https://rhapsody.health/solutions/rhapsody-axon/ ,
+  https://rhapsody.health/solutions/guardian/ ,
+  https://rhapsody.health/solutions/agent-ready-interoperability/ ,
+  https://rhapsody.health/llms.txt ,
   https://rhapsody.health/trust-center/
 note: >-
   Conformance asserted from Rhapsody's public solution and trust pages. Rhapsody
@@ -32,10 +35,25 @@ standards:
   evidence: not confirmed on public pages
 - id: mcp
   conforms: true
-  evidence: Model Context Protocol supported via Rhapsody Axon for agent-ready workflows
+  evidence: >-
+    Model Context Protocol named as a supported protocol on the agent-ready
+    interoperability page alongside FHIR/HL7/REST/CDA/X12/SQL/DICOM/AMQP, and
+    surfaced through Rhapsody Axon. Platform capability only — Rhapsody publishes
+    no reachable MCP endpoint or installable server (see mcp/rhapsody-mcp.yml).
+- id: amqp
+  conforms: true
+  evidence: AMQP listed among the protocols supported from a single platform
+- id: smart-on-fhir
+  conforms: true
+  evidence: >-
+    Rhapsody Guardian product page states "Guardian supports OAuth 2.0, SMART on
+    FHIR, and Basic Auth" for the healthcare APIs a customer exposes through the gateway
 - id: oauth2
   conforms: true
-  evidence: Developer documentation portal fronted by AWS Cognito OAuth2 (authorization code + PKCE)
+  evidence: >-
+    Developer documentation portal fronted by AWS Cognito OAuth2 (authorization
+    code + PKCE); Rhapsody Guardian additionally offers OAuth 2.0 for
+    customer-published APIs
 - id: openid-connect
   conforms: true
   evidence: Cognito hosted UI issues openid/email/profile scopes (OIDC)

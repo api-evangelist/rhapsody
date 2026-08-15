@@ -16,10 +16,13 @@ description: >-
   supports FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and Model
   Context Protocol (MCP) from a single deployment, with embedded AI (Rhapsody
   Axon). Its home market is the United States, aligned to ONC/CMS interoperability
-  mandates. Rhapsody's product REST/administration and FHIR APIs are documented
-  in a developer documentation portal (docs.rhapsody.health) that sits behind an
-  AWS Cognito single-sign-on gate; there is no public self-serve API host or
-  downloadable specification.
+  mandates. Rhapsody added Guardian, a healthcare-purpose-built API gateway
+  (OAuth 2.0, SMART on FHIR, Basic Auth), in October 2025. Rhapsody's product
+  REST/administration and FHIR APIs are documented in a developer documentation
+  portal (docs.rhapsody.health) that sits behind an AWS Cognito single-sign-on
+  gate; there is no public self-serve API host or downloadable specification. The
+  one machine-readable document Rhapsody does publish is an authoritative
+  llms.txt at rhapsody.health/llms.txt.
 accessModel:
   pricing: enterprise
   onboarding: sales
@@ -45,8 +48,9 @@ tags:
 - Terminology
 - Health Data
 - MCP
+- API Gateway
 created: '2026-07-24'
-modified: '2026-07-24T18:00:00Z'
+modified: '2026-08-14T00:00:00Z'
 specificationVersion: '0.19'
 apis:
 - aid: rhapsody:rhapsody-integration-engine
@@ -119,6 +123,29 @@ apis:
     url: https://rhapsody.health/solutions/terminology-management/
   - type: APIReference
     url: https://docs.rhapsody.health/
+- aid: rhapsody:rhapsody-guardian
+  name: Rhapsody Guardian (Healthcare API Gateway)
+  description: >-
+    Rhapsody Guardian is a healthcare-purpose-built API gateway, launched October
+    2025, that lets healthcare organizations securely expose their own APIs and
+    FHIR endpoints. Rhapsody states Guardian "supports OAuth 2.0, SMART on FHIR,
+    and Basic Auth" out of the box, and adds rate limiting, allow/block rules,
+    audit-ready logging and real-time audit trails, plus gateway monitoring,
+    transaction logs, deployment logs and graphical metrics. It manages APIs and
+    HL7 from the same platform as the Rhapsody and Corepoint engines. Guardian's
+    own management/API reference is documented in the gated developer portal.
+  humanURL: https://rhapsody.health/solutions/guardian/
+  tags:
+  - API Gateway
+  - FHIR
+  - SMART on FHIR
+  - API Security
+  - Interoperability
+  properties:
+  - type: Documentation
+    url: https://rhapsody.health/solutions/guardian/
+  - type: APIReference
+    url: https://docs.rhapsody.health/
 - aid: rhapsody:rhapsody-axon-mcp
   name: Rhapsody Axon (AI + MCP)
   description: >-
@@ -147,6 +174,14 @@ common:
   url: authentication/rhapsody-authentication.yml
 - type: LLMsTxt
   url: llms/rhapsody-llms.txt
+- type: ChangeLog
+  url: changelog/rhapsody-changelog.yml
+- type: Lifecycle
+  url: lifecycle/rhapsody-lifecycle.yml
+- type: Plans
+  url: plans/rhapsody-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/rhapsody-rate-limits.yml
 - type: TermsOfService
   url: https://rhapsody.health/rhapsody-terms-and-conditions/
 - type: Website
@@ -167,3 +202,8 @@ common:
   url: https://rhapsody.health/privacy-policy/
 - type: LinkedIn
   url: https://www.linkedin.com/company/rhapsodyhealth
+x-enrichment:
+  date: '2026-08-14'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1

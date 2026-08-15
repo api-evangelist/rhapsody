@@ -1,0 +1,69 @@
+generated: '2026-08-14'
+method: searched
+source: https://rhapsody.health/blog/category/product-news/ , https://rhapsody.health/support/ , https://rhapsody.health/ (sitemap walked)
+note: >-
+  Rhapsody ships versioned, customer-installed products (integration engines,
+  EMPI, terminology) rather than a single hosted public API, so its lifecycle is
+  a PRODUCT release lifecycle, not an API version train. What is publicly
+  observable: named major.minor product releases announced on the corporate blog
+  (Rhapsody Integration 7.3, Corepoint 7.5.3, Rhapsody Semantic 15.3), a support
+  portal, and nothing else. There is NO public status page, NO published
+  deprecation or sunset policy, NO SLA document and NO end-of-life matrix — those
+  live with the customer agreement and inside the gated documentation portal.
+  Because no status page and no deprecation policy exist, this artifact
+  deliberately emits NO StatusPage and NO Deprecation pointer into apis.yml.
+versioning:
+  scheme: product-release (major.minor)
+  applies_to: installed product versions, not a public API version path
+  current: not-published
+  examples:
+  - product: Rhapsody Integration Engine
+    version: '7.3'
+    announced: '2024-02-02'
+  - product: Corepoint Integration Engine
+    version: 7.5.3
+    announced: '2023-03-24'
+  - product: Rhapsody Semantic
+    version: '15.3'
+    announced: '2023-08-01'
+  docs: https://rhapsody.health/blog/category/product-news/
+  release_notes: gated (docs.rhapsody.health, AWS Cognito SSO)
+deprecation:
+  policy_url: null
+  policy_published: false
+  sunset_header: unknown
+  note: >-
+    No public deprecation, sunset or end-of-support policy page exists on
+    rhapsody.health; version support windows are handled through the customer
+    agreement and the gated documentation portal.
+status_page:
+  url: null
+  published: false
+  evidence:
+  - url: https://status.rhapsody.health/
+    status: 000
+    note: host does not resolve
+  - url: https://rhapsody.health/status/
+    status: 404
+  note: >-
+    Rhapsody Dashboard is a customer-facing tool that shows health status for a
+    customer's own engines; it is not a public Rhapsody status page.
+sla:
+  url: null
+  published: false
+  note: Uptime commitments are contractual; no public SLA document.
+support:
+  url: https://rhapsody.health/support/
+  status: 200
+  channels: [customer support portal, professional services, education]
+deprecated_operations: []
+x-evidence:
+- url: https://status.rhapsody.health/
+  status: 000
+- url: https://rhapsody.health/status/
+  status: 404
+- url: https://rhapsody.health/support/
+  status: 200
+- url: https://rhapsody.health/blog/category/product-news/
+  status: 200
+checked: '2026-08-14'
