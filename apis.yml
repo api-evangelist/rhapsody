@@ -155,6 +155,10 @@ apis:
   humanURL: https://rhapsody.health/solutions/rhapsody-axon/
   tags:
   - MCP
+  - Artificial Intelligence
+  - Interoperability
+  tags_raw:
+  - MCP
   - AI
   - Interoperability
   properties:
