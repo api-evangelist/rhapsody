@@ -23,6 +23,20 @@
       "method": "feed"
     },
     {
+      "source": "https://rhapsody.health/blog/feed/",
+      "feed_url": "https://rhapsody.health/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://rhapsody.health/resources/blog/feed/",
+      "feed_url": "https://rhapsody.health/resources/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://docs.rhapsody.health/",
       "feed_url": "https://docs.rhapsody.health/",
       "title": "",
@@ -30,6 +44,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 14,
+  "fetched": "2026-10-17T14:53:57Z"
 }
