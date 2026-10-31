@@ -1,4 +1,4 @@
-# Rhapsody (rhapsody)
+# Rhapsody
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,80 +64,109 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Rhapsody Health Solutions is a US-headquartered (Boston, Massachusetts) healthcare interoperability company trusted by more than 1,900 healthcare organizations across 31 countries and recognized as Best in KLAS for integration engines for 17 consecutive years. Its single platform spans integration engines (Rhapsody and Corepoint), enterprise master patient index (Rhapsody Identity / EMPI), semantic terminology management, data governance (Guardian), and automated integrations — supporting FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and Model Context Protocol (MCP), with embedded AI via Rhapsody Axon.
+Rhapsody Health Solutions is a US-headquartered (Boston, Massachusetts) healthcare interoperability company trusted by more than 1,900 healthcare organizations across 31 countries, and recognized as Best in KLAS for integration engines for 17 consecutive years. Formed from the lineage of Orion Health's Rhapsody Integration Engine (2000), the 2019 merger with Corepoint Health, and acquisitions of Datica, NextGate EMPI, and CareCom, Rhapsody delivers a single interoperability platform spanning integration engines (Rhapsody and Corepoint), enterprise master patient index (EMPI / Rhapsody Identity), semantic terminology management, data governance (Guardian), and automated integrations (Envoy, Image Director). The platform supports FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and Model Context Protocol (MCP) from a single deployment, with embedded AI (Rhapsody Axon). Its home market is the United States, aligned to ONC/CMS interoperability mandates. Rhapsody added Guardian, a healthcare-purpose-built API gateway (OAuth 2.0, SMART on FHIR, Basic Auth), in October 2025. Rhapsody's product REST/administration and FHIR APIs are documented in a developer documentation portal (docs.rhapsody.health) that sits behind an AWS Cognito single-sign-on gate; there is no public self-serve API host or downloadable specification. The one machine-readable document Rhapsody does publish is an authoritative llms.txt at rhapsody.health/llms.txt.
 
-Rhapsody's product REST/administration and FHIR APIs are documented in a developer documentation portal at `docs.rhapsody.health` that is gated behind AWS Cognito single-sign-on. There is no public self-serve API host, no public FHIR CapabilityStatement, and no downloadable OpenAPI specification. The engines are deployed in customer (self-hosted or cloud) environments, so the API surface is per-instance rather than a single public endpoint.
+**Areas:** Healthcare · United States · Interoperability · Integration Engine · FHIR · HL7 · EMPI · Terminology · Health Data · MCP · API Gateway
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/rhapsody/refs/heads/main/apis.yml)
+## Rhapsody on APIs.io
 
-## Tags
+Everything profiled for Rhapsody is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/rhapsody/](https://apis.io/providers/rhapsody/)** — or go straight to one of the APIs or properties below.
 
-- Healthcare
-- United States
-- Interoperability
-- Integration Engine
-- FHIR
-- HL7
-- EMPI
-- Terminology
-- Health Data
-- MCP
+### APIs (6)
 
-## Timestamps
+- [Rhapsody Integration Engine](https://apis.io/apis/rhapsody/rhapsody-integration-engine/) — Rhapsody's flagship healthcare integration engine, connecting systems across FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and MCP from a single…
+- [Corepoint Integration Engine](https://apis.io/apis/rhapsody/corepoint-integration-engine/) — Corepoint healthcare integration engine (from the 2019 Corepoint Health merger), the top-ranked integration engine since 2009, with an Administration REST…
+- [Rhapsody Identity (EMPI)](https://apis.io/apis/rhapsody/rhapsody-identity-empi/) — Rhapsody's Enterprise Master Patient Index for patient matching and identity resolution (built on the NextGate acquisition), exposing API capabilities for…
+- [Rhapsody Semantic (Terminology Management)](https://apis.io/apis/rhapsody/rhapsody-semantic/) — Rhapsody Semantic terminology management and data standardization services (code-system mapping, LOINC/SNOMED standardization) supporting FHIR terminology…
+- [Rhapsody Guardian (Healthcare API Gateway)](https://apis.io/apis/rhapsody/rhapsody-guardian/) — Rhapsody Guardian is a healthcare-purpose-built API gateway, launched October 2025, that lets healthcare organizations securely expose their own APIs and…
+- [Rhapsody Axon (AI + MCP)](https://apis.io/apis/rhapsody/rhapsody-axon-mcp/) — Rhapsody Axon embeds AI into the integration platform and adds Model Context Protocol (MCP) support for AI-driven, agent-ready healthcare data workflows.…
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Rhapsody Integration Engine
+#### Security (3)
 
-Flagship healthcare integration engine connecting systems across FHIR, HL7 v2, REST, CDA, X12/EDI, SQL, DICOM, AMQP, and MCP from a single platform, with a REST administration/management API.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://rhapsody.health/solutions/rhapsody/](https://rhapsody.health/solutions/rhapsody/)
-- **API Reference (gated):** [https://docs.rhapsody.health/](https://docs.rhapsody.health/)
+- [Rhapsody Authentication](https://apis.io/security/rhapsody/rhapsody-authentication/)
+- [Rhapsody Domain Security](https://apis.io/security/rhapsody/rhapsody-domain-security/)
+- [Rhapsody Trust Center](https://apis.io/security/rhapsody/rhapsody-trust-center/)
 
-### Corepoint Integration Engine
+#### Plans and pricing (1)
 
-Top-ranked integration engine (since 2009) from the Corepoint Health merger, with an Administration REST API introduced in Corepoint 7.5.3.
+Published plans, tiers and prices.
 
-- **Human URL:** [https://rhapsody.health/solutions/corepoint/](https://rhapsody.health/solutions/corepoint/)
-- **API Reference (gated):** [https://docs.rhapsody.health/](https://docs.rhapsody.health/)
+- [Rhapsody Plans Pricing](https://apis.io/plans/rhapsody/rhapsody-plans-pricing/)
 
-### Rhapsody Identity (EMPI)
+#### Rate limits (1)
 
-Enterprise Master Patient Index for patient matching and identity resolution, exposing API capabilities for person-data management.
+Published request limits.
 
-- **Human URL:** [https://rhapsody.health/solutions/empi/](https://rhapsody.health/solutions/empi/)
-- **API Reference (gated):** [https://docs.rhapsody.health/](https://docs.rhapsody.health/)
+- [Rhapsody Rate Limits](https://apis.io/rate-limits/rhapsody/rhapsody-rate-limits/)
 
-### Rhapsody Semantic (Terminology Management)
+## Where to find this API
 
-Terminology management and data standardization services supporting FHIR terminology workflows.
-
-- **Human URL:** [https://rhapsody.health/solutions/terminology-management/](https://rhapsody.health/solutions/terminology-management/)
-- **API Reference (gated):** [https://docs.rhapsody.health/](https://docs.rhapsody.health/)
-
-### Rhapsody Axon (AI + MCP)
-
-Embedded AI plus Model Context Protocol (MCP) support for agent-ready, AI-driven healthcare data workflows.
-
-- **Human URL:** [https://rhapsody.health/solutions/rhapsody-axon/](https://rhapsody.health/solutions/rhapsody-axon/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://rhapsody.health/)
-- [Developer Portal (gated)](https://docs.rhapsody.health/)
-- [Documentation (gated)](https://docs.rhapsody.health/)
-- [Blog](https://rhapsody.health/blog/)
+- [Documentation](https://docs.rhapsody.health/)
 - [Support](https://rhapsody.health/support/)
-- [Trust Center](https://rhapsody.health/trust-center/)
+- [Blog](https://rhapsody.health/resources/)
 - [Security](https://rhapsody.health/data-privacy-and-security/)
-- [Compliance (ONC)](https://rhapsody.health/onc-compliance/)
-- [Privacy Policy](https://rhapsody.health/privacy-policy/)
-- [LinkedIn](https://www.linkedin.com/company/rhapsodyhealth)
+- [Compliance](https://rhapsody.health/onc-compliance/)
+- [Terms of service](https://rhapsody.health/rhapsody-terms-and-conditions/)
+- [Privacy policy](https://rhapsody.health/privacy-policy/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 36.8 |
+
+**Agent readiness 5.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 34.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/rhapsody/](https://apis.io/providers/rhapsody/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Rhapsody: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/rhapsody/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
